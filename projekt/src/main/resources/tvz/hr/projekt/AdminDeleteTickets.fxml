@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="tvz.hr.projekt.controllers.AdminDelete"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <MenuBar layoutY="1.0" prefHeight="26.0" prefWidth="700.0">
+            <menus>
+                <Menu fx:id="findTicketsView1" mnemonicParsing="false" onAction="#DeleteFlights" text="Delete Ticket">
+                    <items>
+                        <Menu fx:id="findTicketsView11" mnemonicParsing="false" onAction="#DeleteFlights" text="Find Ticket" />
+                    </items>
+                </Menu>
+                <Menu fx:id="addTicketsView" mnemonicParsing="false" onAction="#AddTickets" text="Add tickets">
+                    <items>
+                        <Menu fx:id="addTicketsView1" mnemonicParsing="false" onAction="#AddTickets" text="Add tickets" />
+                    </items>
+                </Menu>
+                <Menu fx:id="changeFlight" mnemonicParsing="false" onAction="#changeFlight" text="Change Flight">
+                    <items>
+                        <Menu fx:id="changeFlight1" mnemonicParsing="false" onAction="#changeFlight" text="Change" />
+                    </items>
+                </Menu>
+                <Menu fx:id="soldTicketsView" mnemonicParsing="false" onAction="#SoldTickets" text="Sold Tickets">
+                    <items>
+                        <Menu fx:id="soldTicketsView1" mnemonicParsing="false" onAction="#SoldTickets" text="Sold Tickets" />
+                    </items>
+                </Menu>
+                <Menu fx:id="changesView" mnemonicParsing="false" onAction="#changes" text="Changes">
+                    <items>
+                        <Menu fx:id="changesView1" mnemonicParsing="false" onAction="#changes" text="View" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <Button layoutX="596.0" layoutY="50.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="77.0" text="Logout" />
+
+        <Label layoutX="112.0" layoutY="48.0" text="From:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="114.0" layoutY="110.0" text="Date:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="fromFlight" layoutX="226.0" layoutY="46.0" />
+        <DatePicker fx:id="datePicker" layoutX="226.0" layoutY="108.0" />
+        <TableView fx:id="flightTableView" layoutY="263.0" prefHeight="238.0" prefWidth="700.0">
+            <columns>
+                <TableColumn fx:id="flightIdColumn" prefWidth="84.0" text="Flight" />
+                <TableColumn fx:id="fromTableColumn" prefWidth="129.0" text="From" />
+                <TableColumn fx:id="toTableColumn" prefWidth="137.0" text="To" />
+                <TableColumn fx:id="departureDateColumn" prefWidth="162.0" text="Departure Date" />
+                <TableColumn fx:id="arriveDateColumn" prefWidth="184.0" text="Arrive Date" />
+
+            </columns>
+        </TableView>
+
+        <Label layoutX="111.0" layoutY="77.0" text="To:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="toFlight" layoutX="226.0" layoutY="75.0" />
+        <Button layoutX="109.0" layoutY="188.0" mnemonicParsing="false" onAction="#pretrazi" prefHeight="25.0" prefWidth="117.0" text="FIND TICKET" />
+        <Button fx:id="buyTicket" layoutX="283.0" layoutY="188.0" mnemonicParsing="false" onAction="#deleteTicket" prefHeight="21.0" prefWidth="117.0" text="DELETE TICKET" />
+        <Label layoutX="116.0" layoutY="149.0" text="Type of seat:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <ChoiceBox fx:id="ticketTypeChoiceBox" layoutX="226.0" layoutY="147.0" prefWidth="150.0" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tvz.hr.projekt.controllers.AdminAddFlights">
+    <children>
+        <MenuBar layoutY="1.0" prefHeight="26.0" prefWidth="700.0">
+            <menus>
+                <Menu fx:id="findTicketsView1" mnemonicParsing="false" onAction="#deleteTicket" text="Delete Ticket">
+                    <items>
+                        <Menu fx:id="findTicketsView11" mnemonicParsing="false" onAction="#deleteTicket" text="Delete Ticket" />
+                    </items>
+                </Menu>
+                <Menu fx:id="addTicketsView" mnemonicParsing="false" onAction="#AddTickets" text="Add tickets">
+                    <items>
+                        <Menu fx:id="addTicketsView1" mnemonicParsing="false" onAction="#AddTickets" text="Add tickets" />
+                    </items>
+                </Menu>
+                <Menu fx:id="changeFlight" mnemonicParsing="false" onAction="#changeFlight" text="Change Flight">
+                    <items>
+                        <Menu fx:id="changeFlight1" mnemonicParsing="false" onAction="#changeFlight" text="Change" />
+                    </items>
+                </Menu>
+                <Menu fx:id="soldTicketsView" mnemonicParsing="false" onAction="#SoldTickets" text="Sold Tickets">
+                    <items>
+                        <Menu fx:id="soldTicketsView1" mnemonicParsing="false" onAction="#SoldTickets" text="Sold Tickets" />
+                    </items>
+                </Menu>
+                <Menu fx:id="changesView" mnemonicParsing="false" onAction="#Change" text="Changes">
+                    <items>
+                        <Menu fx:id="changesView1" mnemonicParsing="false" onAction="#Change" text="View" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+      <Button layoutX="596.0" layoutY="50.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="77.0" text="Logout" />
+      <Label layoutX="163.0" layoutY="131.0" text="From:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="163.0" layoutY="167.0" text="To:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="163.0" layoutY="97.0" text="Flight ID:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="162.0" layoutY="203.0" prefHeight="20.0" prefWidth="101.0" text="Departure Date:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="162.0" layoutY="279.0" text="Arrive Date:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+        <Label layoutX="162.0" layoutY="240.0" prefHeight="20.0" prefWidth="101.0" text="Departure Time:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="162.0" layoutY="314.0" text="Arrive Time:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+      <TextField fx:id="flightId" layoutX="290.0" layoutY="95.0" />
+      <TextField fx:id="from" layoutX="290.0" layoutY="129.0" />
+      <TextField fx:id="to" layoutX="290.0" layoutY="165.0" />
+      <TextField fx:id="departureDate" layoutX="290.0" layoutY="201.0" promptText="MM-dd-yyyy" />
+      <TextField fx:id="departureTime" layoutX="290.0" layoutY="238.0" promptText="HH:mm" />
+      <TextField fx:id="arriveDate" layoutX="290.0" layoutY="277.0" promptText="MM-dd-yyyy" />
+      <TextField fx:id="arriveTime" layoutX="290.0" layoutY="312.0" promptText="HH:mm" />
+
+      <Label layoutX="164.0" layoutY="353.0" text="No. business seats:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="163.0" layoutY="386.0" text="No. economy:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="164.0" layoutY="424.0" text="No. firstClass:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+
+      <TextField fx:id="numberOfBusiness" layoutX="290.0" layoutY="351.0" />
+      <TextField fx:id="numberOfEconomy" layoutX="290.0" layoutY="384.0" />
+      <TextField fx:id="numberOfFirstClass" layoutX="290.0" layoutY="421.0" />
+        <Button layoutX="508.0" layoutY="253.0" mnemonicParsing="false" onAction="#addFlight" prefHeight="45.0" prefWidth="159.0" text="Add Flight" />
+
+        <Button layoutX="508.0" layoutY="343.0" mnemonicParsing="false" onAction="#discard" prefHeight="45.0" prefWidth="159.0" text="Discard" />
+       
+    </children>
+</AnchorPane>
