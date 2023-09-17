@@ -10,6 +10,7 @@ import java.io.IOException;
 
 public class GoogleApi {
 
+    //String apiKey = ....
     private static final double EARTH_RADIUS = 6371;
     GeoApiContext context = new GeoApiContext.Builder()
             .apiKey(apiKey)
